@@ -6,6 +6,8 @@ import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/
 import Signup from './Screens/Ls/Signup';
 import Dl from './Screens/Ls/Dl';
 import Login from './Screens/Ls/Login';
+import Mobile from './Screens/Ls/Mobile';
+import Code from './Screens/Ls/Code';
 
 const Stack = createStackNavigator();
 
@@ -41,7 +43,8 @@ const SL = () => {
       <Stack.Screen name="DL" component={Dl} />
       <Stack.Screen name="Signup" component={Signup} />
       <Stack.Screen name="Login" component={Login} />
-
+      <Stack.Screen name="Mobile" component={Mobile}/>
+      <Stack.Screen name='Code' component={Code}/>
     </Stack.Navigator>
 
   )

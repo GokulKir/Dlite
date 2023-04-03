@@ -99,7 +99,7 @@ export default function Login() {
 
 <View style={{justifyContent:'space-evenly'}}>
 
-  <TouchableOpacity>
+  <TouchableOpacity onPress={()=> navigation.navigate('Mobile')}>
 
   <Text style={{color:'#575c5c' , marginLeft:wp('50%') , marginTop:hp('2%') ,}}>Forgot Password?</Text>
 
