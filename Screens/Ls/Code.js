@@ -172,7 +172,7 @@ style={{width:45 , height:45 , borderWidth:2 , borderColor:'#2e3030'  ,  borderR
   <View style={{ alignItems: 'center', marginTop: hp('9%') }}>
 
 
-<TouchableOpacity style={{ width: wp('85%'), height: hp('7%'), backgroundColor: '#67f5d4', borderRadius: 10, alignItems: 'center', justifyContent: 'center' }}>
+<TouchableOpacity style={{ width: wp('90%'), height: hp('4.8%'), backgroundColor: '#67f5d4', borderRadius: 4, alignItems: 'center', justifyContent: 'center'  }}>
 
   <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#000' }}>Confirm</Text>
 

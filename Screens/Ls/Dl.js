@@ -54,7 +54,7 @@ export default function Dl() {
 
                 </View>
 
-                <TouchableOpacity onPress={() => navigation.navigate('Signup')} style={{ width: wp('80%'), height: hp('5%'), backgroundColor: '#67f5d4', borderRadius: 20, top: hp('3%'), justifyContent: 'center' }}>
+                <TouchableOpacity onPress={() => navigation.navigate('Username')} style={{ width: wp('80%'), height: hp('5%'), backgroundColor: '#67f5d4', borderRadius: 20, top: hp('3%'), justifyContent: 'center' }}>
 
                     <View style={{ alignItems: 'center', justifyContent: 'center' }}>
 

@@ -11,6 +11,7 @@ import { TextInput } from 'react-native-gesture-handler';
 import {Picker} from '@react-native-picker/picker';
 import CountryPicker ,{DARK_THEME} from 'react-native-country-picker-modal';
 import { forModalPresentationIOS } from '@react-navigation/stack/lib/typescript/src/TransitionConfigs/CardStyleInterpolators';
+import { responsiveHeight , responsiveWidth , responsiveFontSize } from 'react-native-responsive-dimensions';
 
 
 
@@ -75,7 +76,7 @@ export default function Mobile() {
 <View style={{alignItems:'center'}}>
 
 
-<View style={{ alignItems: 'center', marginTop: hp('7%') }}>
+<View style={{ alignItems: 'center', marginTop:responsiveHeight(2) }}>
 
 <Text style={{ color: '#fff', fontWeight: '300', fontSize: 23 }}>Enter your phone number</Text>
 
@@ -84,7 +85,7 @@ export default function Mobile() {
 
 
 
-<View style={{ alignItems: 'center', marginTop: hp('2%') }}>
+<View style={{ alignItems: 'center', marginTop: hp('1%') }}>
 
 <Text style={{ color: '#fff', fontWeight: '200', fontSize: 13 }}>Forgot password?</Text>
 
@@ -93,14 +94,14 @@ export default function Mobile() {
 
 
 
-<View style={{alignItems:'center' ,  flexDirection:'row' , justifyContent:'space-between' , marginTop:hp('4%') }}>
+<View style={{alignItems:'center' ,  flexDirection:'row' , justifyContent:'space-between' , marginTop:hp('-4%') }}>
 
 
-<View style={{ width: wp('25%'), height: hp('6%'), backgroundColor: '#2e3030', marginTop: hp('12%'), borderRadius: 10, flexDirection: 'row'  , marginLeft:wp('-1%') , justifyContent:'center' , }} >
+<View style={{ width: wp('20%'), height: responsiveHeight(5) , backgroundColor: '#2e3030', marginTop: hp('12%'), borderRadius: 3, flexDirection: 'row'  ,left:wp('-2%') , justifyContent:'center' , }} >
 
 
      
-      <CountryPicker containerButtonStyle={{alignItems:'center' , top:9}}  theme={DARK_THEME}
+      <CountryPicker containerButtonStyle={{alignItems:'center' , top:7}}  theme={DARK_THEME}
         {...{
           countryCode,
           withFilter,
@@ -123,7 +124,7 @@ export default function Mobile() {
 
 
 
-<View style={{ width: wp('70%'), height: hp('6%'), backgroundColor: '#2e3030', marginTop: hp('12%'), borderRadius: 10, flexDirection: 'row' ,  left:wp('1%') }} >
+<View style={{ width: responsiveWidth(70), height: responsiveHeight(5), backgroundColor: '#2e3030', borderRadius: 5, borderRadius: 3, flexDirection: 'row', marginTop: responsiveHeight(12) , left:responsiveWidth(1) }} >
 
 <TextInput maxLength={10}  keyboardType = 'numeric' style={{ width: "80%", height: '100%', paddingLeft: 12, color: "#989b9c" }} placeholder="Your mobile" placeholderTextColor={"#989b9c"} onChangeText={setNumber} />
 
@@ -153,10 +154,11 @@ export default function Mobile() {
 
 
 
-<View style={{ alignItems: 'center', marginTop: hp('19%') }}>
+
+<View style={{ alignItems: 'center', marginTop:responsiveHeight(6)}}>
 
 
-<TouchableOpacity onPress={()=> navigation.navigate('Code',{number , country})} style={{ width: wp('85%'), height: hp('7%'), backgroundColor: '#67f5d4', borderRadius: 10, alignItems: 'center', justifyContent: 'center' }}>
+<TouchableOpacity onPress={() => navigation.navigate('Code' , {number , country})} style={{ width: wp('90%'), height: hp('4.8%'), backgroundColor: '#67f5d4', borderRadius: 4, alignItems: 'center', justifyContent: 'center' }}>
 
   <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#000' }}>Send</Text>
 
@@ -168,6 +170,23 @@ export default function Mobile() {
 
 
 </View> 
+
+
+<View style={{ alignItems: 'center', marginTop: responsiveHeight(2) }}>
+
+
+<TouchableOpacity style={{width:responsiveWidth(80) , height:responsiveHeight(7) , alignItems:'center' , justifyContent:'center'}} onPress={() => navigation.navigate('Username')}>
+
+
+  <Text style={{ color: '#fff' }}>Create new account </Text>
+
+
+
+</TouchableOpacity>
+
+
+
+</View>
 
 
 </View>
@@ -189,7 +208,7 @@ const styles = StyleSheet.create({
     } ,
     data : {
       color:'#989b9c' ,
-      top:13
+      top:11
 
     }
 })
