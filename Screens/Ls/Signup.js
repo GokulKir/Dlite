@@ -1,5 +1,5 @@
 import { StyleSheet, Text, TextInput, View } from 'react-native'
-import React ,{useState , useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import Icon from 'react-native-vector-icons/dist/AntDesign';
 import Icon1 from 'react-native-vector-icons/dist/FontAwesome5';
@@ -8,12 +8,12 @@ import Icon3 from 'react-native-vector-icons/dist/Fontisto';
 import Icon4 from 'react-native-vector-icons/dist/Entypo';
 
 
-
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
+import { responsiveFontSize, responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
 
 export default function Signup() {
-const [eye, setEye] = useState(false)
+  const [eye, setEye] = useState(false)
   const navigation = useNavigation()
 
 
@@ -49,52 +49,39 @@ const [eye, setEye] = useState(false)
           </View>
 
 
+
+          <View style={{ alignItems: 'center' }}>
+
+            <View style={{ marginTop: responsiveHeight(4), color: "#fff", alignItems: 'center' }}>
+
+              <Text style={{ color: '#fff', fontSize: responsiveFontSize(2.6), fontWeight: '400' }}>Sign up your account</Text>
+
+
+              <Text style={{ color: '#fff', fontSize: responsiveFontSize(1.6), fontWeight: '200', top: responsiveHeight(1) }}>Enter your email and password.</Text>
+              <Text style={{ color: '#fff', fontSize: responsiveFontSize(1.6), fontWeight: '200', top: responsiveHeight(1.2) }}>You can hide this from your profile later.</Text>
+
+            </View>
+
+          </View>
+
+
           <View style={{ alignItems: 'center' }}>
 
 
 
 
-            <View style={{ alignItems: 'center', marginTop: hp('6%') }}>
-
-              <Text style={{ color: '#fff', fontWeight: '300', fontSize: 23 }}>Welcome to User</Text>
-
-
-            </View>
-
-
-            <View style={{ alignItems: 'center', marginTop: hp('2%') }}>
-
-              <Text style={{ color: '#fff', fontWeight: '200', fontSize: 13 }}>Sign up to continue</Text>
-
-            </View>
 
 
 
-            <View style={{ width: wp('90%'), height: hp('6%'), backgroundColor: '#2e3030', marginTop: hp('12%'), borderRadius: 10, flexDirection: 'row', }} >
 
-
-
-              <TextInput style={{ width: "80%", height: '100%', paddingLeft: 12, color: "#989b9c" }} placeholder="Username" placeholderTextColor={"#989b9c"} />
-
-
-              <View style={{ justifyContent: 'center', paddingLeft: 27 }}>
-
-                <Icon1 name="user-circle" size={25} color="#8c8f8f" />
-
-              </View>
-
-
-            </View>
-
-
-            <View style={{ width: wp('90%'), height: hp('6%'), backgroundColor: '#2e3030', marginTop: hp('5%'), borderRadius: 10, flexDirection: 'row' }} >
+            <View style={{ width: responsiveWidth(90), height: responsiveHeight(5), backgroundColor: '#2e3030', borderRadius: 5, borderRadius: 3, flexDirection: 'row', marginTop: responsiveHeight(9) }} >
 
               <TextInput style={{ width: "80%", height: '100%', paddingLeft: 12, color: "#989b9c" }} placeholder="Your email" placeholderTextColor={"#989b9c"} />
 
 
               <View style={{ justifyContent: 'center', paddingLeft: 27 }}>
 
-                <Icon2 name="email" size={25} color="#8c8f8f" />
+                <Icon2 name="email" size={23} color="#8c8f8f" />
 
               </View>
 
@@ -103,12 +90,12 @@ const [eye, setEye] = useState(false)
             </View>
 
 
-            <View style={{ width: wp('90%'), height: hp('6%'), backgroundColor: '#2e3030', marginTop: hp('5%'), borderRadius: 10, flexDirection: 'row' }} >
+            <View style={{ width: responsiveWidth(90), height: responsiveHeight(5), backgroundColor: '#2e3030', borderRadius: 5, borderRadius: 3, flexDirection: 'row', marginTop: responsiveHeight(3) }} >
 
 
-              {eye == true ?               <TextInput secureTextEntry={false} style={{ width: "80%", height: '100%', paddingLeft: 12, color: "#989b9c" }} placeholder="Your password" placeholderTextColor={"#989b9c"} />
-  :               <TextInput secureTextEntry={true} style={{ width: "80%", height: '100%', paddingLeft: 12, color: "#989b9c" }} placeholder="Your password" placeholderTextColor={"#989b9c"} />
-}
+              {eye == true ? <TextInput secureTextEntry={false} style={{ width: "80%", height: '100%', paddingLeft: 12, color: "#989b9c" }} placeholder="Your password" placeholderTextColor={"#989b9c"} />
+                : <TextInput secureTextEntry={true} style={{ width: "80%", height: '100%', paddingLeft: 12, color: "#989b9c" }} placeholder="Your password" placeholderTextColor={"#989b9c"} />
+              }
 
 
               <View style={{ justifyContent: 'center', paddingLeft: 27 }}>
@@ -116,9 +103,9 @@ const [eye, setEye] = useState(false)
                 <TouchableOpacity onPress={() => Show()}>
 
 
-               {eye ?   <Icon4 name="eye" size={25} color="#8c8f8f" /> :  <Icon4 name="eye-with-line" size={25} color="#8c8f8f" />}
+                  {eye ? <Icon4 name="eye" size={23} color="#8c8f8f" /> : <Icon4 name="eye-with-line" size={23} color="#8c8f8f" />}
 
-               
+
 
                 </TouchableOpacity>
 
@@ -130,20 +117,6 @@ const [eye, setEye] = useState(false)
 
 
 
-  
-            </View>
-
-
-
-            <View style={{ width: wp('90%'), height: hp('6%'), backgroundColor: '#2e3030', marginTop: hp('5%'), borderRadius: 10, flexDirection: 'row' }} >
-
-              <TextInput  secureTextEntry={true}  style={{ width: "80%", height: '100%', paddingLeft: 12, color: "#989b9c" }} placeholder="Confirm password" placeholderTextColor={"#989b9c"} />
-
-              <View style={{ justifyContent: 'center', paddingLeft: 27 }}>
-
-                <Icon3 name="locked" size={25} color="#8c8f8f" />
-
-              </View>
 
 
 
@@ -151,7 +124,7 @@ const [eye, setEye] = useState(false)
 
 
 
-  
+
             </View>
 
 
@@ -159,12 +132,12 @@ const [eye, setEye] = useState(false)
 
 
 
-          <View style={{ alignItems: 'center', marginTop: hp('8%') }}>
+          <View style={{ alignItems: 'center', marginTop: hp('5%') }}>
 
 
-            <TouchableOpacity style={{ width: wp('85%'), height: hp('7%'), backgroundColor: '#67f5d4', borderRadius: 10, alignItems: 'center', justifyContent: 'center' }}>
+            <TouchableOpacity onPress={() => navigation.navigate('Signup')} style={{ width: wp('90%'), height: hp('4.8%'), backgroundColor: '#67f5d4', borderRadius: 4, alignItems: 'center', justifyContent: 'center' }}>
 
-              <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#000' }}>Sign up</Text>
+              <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#000' }}>Next</Text>
 
             </TouchableOpacity>
 
@@ -173,27 +146,27 @@ const [eye, setEye] = useState(false)
 
 
 
-          <View style={{ alignItems: 'center', marginTop: hp('5%') }}>
 
-            <View style={{ flexDirection: 'row', alignSelf: 'center' }}>
+          <View style={{ marginTop: responsiveHeight(34.5), alignItems: 'center' }} >
 
-              <Text style={{ color: '#fff' }}>Already have an account ? </Text>
+            <View style={{ flexDirection: 'row', justifyContent: 'flex-start', right: wp('2%') }}>
+              <Text style={{ color: '#fff' }}>Have an account already?</Text>
+
 
               <TouchableOpacity onPress={() => navigation.navigate('Login')}>
 
-
-                <Text style={{ color: '#fff', marginLeft: wp('1%'), color: '#67f5d4' }}>Login</Text>
+                <Text style={{ color: '#67f5d4', fontWeight: '600', marginLeft: wp('2%') }}>Login</Text>
 
 
               </TouchableOpacity>
 
 
 
+
+
+
+
             </View>
-
-
-
-
           </View>
 
 
