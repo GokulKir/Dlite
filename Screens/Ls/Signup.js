@@ -74,7 +74,7 @@ export default function Signup() {
 
 
 
-            <View style={{ width: responsiveWidth(90), height: responsiveHeight(5), backgroundColor: '#2e3030', borderRadius: 5, borderRadius: 3, flexDirection: 'row', marginTop: responsiveHeight(9) }} >
+            <View style={{ width: responsiveWidth(90), height: responsiveHeight(5), backgroundColor: '#282929', borderRadius: 5, borderRadius: 3, flexDirection: 'row', marginTop: responsiveHeight(9) }} >
 
               <TextInput style={{ width: "80%", height: '100%', paddingLeft: 12, color: "#989b9c" }} placeholder="Your email" placeholderTextColor={"#989b9c"} />
 
@@ -90,7 +90,7 @@ export default function Signup() {
             </View>
 
 
-            <View style={{ width: responsiveWidth(90), height: responsiveHeight(5), backgroundColor: '#2e3030', borderRadius: 5, borderRadius: 3, flexDirection: 'row', marginTop: responsiveHeight(3) }} >
+            <View style={{ width: responsiveWidth(90), height: responsiveHeight(5), backgroundColor: '#282929', borderRadius: 5, borderRadius: 3, flexDirection: 'row', marginTop: responsiveHeight(3) }} >
 
 
               {eye == true ? <TextInput secureTextEntry={false} style={{ width: "80%", height: '100%', paddingLeft: 12, color: "#989b9c" }} placeholder="Your password" placeholderTextColor={"#989b9c"} />
@@ -135,7 +135,7 @@ export default function Signup() {
           <View style={{ alignItems: 'center', marginTop: hp('5%') }}>
 
 
-            <TouchableOpacity onPress={() => navigation.navigate('Signup')} style={{ width: wp('90%'), height: hp('4.8%'), backgroundColor: '#67f5d4', borderRadius: 4, alignItems: 'center', justifyContent: 'center' }}>
+            <TouchableOpacity onPress={() => navigation.navigate('Birth')} style={{ width: wp('90%'), height: hp('4.8%'), backgroundColor: '#67f5d4', borderRadius: 4, alignItems: 'center', justifyContent: 'center' }}>
 
               <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#000' }}>Next</Text>
 

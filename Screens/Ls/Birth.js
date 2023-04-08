@@ -1,19 +1,29 @@
-import { StyleSheet, Text, View, Button, TouchableOpacity , Platform } from 'react-native'
+import { StyleSheet, Text, View, Button, TouchableOpacity, Platform, TextInput } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import DatePicker from 'react-native-date-picker'
-import Icon from 'react-native-vector-icons/dist/AntDesign';
+import Icon from 'react-native-vector-icons/dist/Entypo';
+import Icon1 from 'react-native-vector-icons/dist/FontAwesome';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { useNavigation } from '@react-navigation/native';
-import { TextInput } from 'react-native-paper';
+
+import { responsiveHeight, responsiveWidth, responsiveFontSize } from 'react-native-responsive-dimensions';
 
 export default function Birth() {
   const [date, setDate] = useState(new Date());
   const [open, setOpen] = useState(false)
-  const [day, setday] = useState('')
-  const [month, setMonth] = useState('')
-  const [year, setYear] = useState('')
+  const [day, setday] = useState()
+  const [month, setMonth] = useState()
+  const [year, setYear] = useState()
   const [text, setText] = React.useState('');
-  
+  const [val, setVal] = useState()
+
+  useEffect(() => {
+    setMonth(date.getMonth() + 1)
+    setday(date.getDate())
+    setYear(date.getFullYear())
+      setVal(month < 10 ?  0 : '')
+  })
+
 
   const navigation = useNavigation()
 
@@ -38,7 +48,15 @@ export default function Birth() {
 
       </View> */}
 
-      <View style={{ alignItems: 'center'  , marginTop:hp('9%')}}>
+
+      <View style={{ alignItems: "center", top: responsiveHeight(8) }}>
+
+        <Icon1 name="birthday-cake" size={35} color="#fff" />
+
+
+      </View>
+
+      <View style={{ alignItems: 'center', marginTop: hp('9%') }}>
 
 
         <View style={{ alignItems: 'center', marginTop: hp('2%') }}>
@@ -51,31 +69,59 @@ export default function Birth() {
 
         <View style={{ alignItems: 'center', marginTop: hp('2%') }}>
 
-          <Text style={{ color: '#fff', fontWeight: '200', fontSize: 13  }}>Choose your date of birth. You can always make this private</Text>
-          <Text style={{ color: '#fff', fontWeight: '200', fontSize: 13 , top:1 }}>later.</Text>
+          <Text style={{ color: '#fff', fontWeight: '200', fontSize: 13 }}>Choose your date of birth. You can always make this private</Text>
+          <Text style={{ color: '#fff', fontWeight: '200', fontSize: 13, top: 1 }}>later.</Text>
+        </View>
+
+
+
+        <View style={{ width: responsiveWidth(90), height: responsiveHeight(5), backgroundColor: '#282929', borderRadius: 5, borderRadius: 3, flexDirection: 'row', marginTop: responsiveHeight(7), left: responsiveWidth(1) }} >
+
+          {open ? <TextInput keyboardType='numeric' style={{ width: "80%", height: '100%', paddingLeft: 12, color: "#989b9c" }} placeholder="DD / MM / YYYY" placeholderTextColor={"#989b9c"} value={'DD / MM / YYYY '} /> :
+
+
+            <TextInput keyboardType='numeric' style={{ width: "80%", height: '100%', paddingLeft: 12, color: "#989b9c" }} placeholder="DD / MM / YYYY" placeholderTextColor={"#989b9c"} value={day + ' / ' + val+month + ' / ' + year} />
+
+          }
+
+          <TouchableOpacity onPress={() => setOpen(true)} style={{ justifyContent: 'center', paddingLeft: 15 }}>
+
+            <DatePicker
+              modal
+              open={open}
+              date={date}
+              textColor="#67f5d4"
+              theme="dark"
+              mode="date"
+              onConfirm={(date) => {
+                setOpen(false)
+                setDate(date)
+              }}
+              onCancel={() => {
+                setOpen(false)
+              }}
+            />
+
+            <Icon name="calendar" size={23} color="#8c8f8f" />
+
+          </TouchableOpacity>
+
+
+
         </View>
 
 
 
 
-        <TextInput style={{width:wp('90%') , top:hp('3%') , height:hp('6%') , borderRadius:5 , backgroundColor:'#2e3030' ,}}
-      label="DD/MM/YYYY"
-      right={<TextInput.Icon icon="eye" />}
-    />
+
+        <View style={{ alignItems: 'center', marginTop: hp('5%') }}>
 
 
 
 
 
 
-        <View style={{ alignItems: 'center', marginTop: hp('8%') }}>
-
-
-
-
-
-
-          <TouchableOpacity  onPress={() => navigation.navigate('Gender')} style={{ width: wp('85%'), height: hp('6%'), backgroundColor: '#67f5d4', borderRadius: 10, alignItems: 'center', justifyContent: 'center' }}>
+          <TouchableOpacity onPress={() => navigation.navigate('Gender')} style={{ width: wp('90%'), height: hp('4.8%'), backgroundColor: '#67f5d4', borderRadius: 4, alignItems: 'center', justifyContent: 'center' }}>
 
             <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#000' }}>Next</Text>
 
@@ -84,10 +130,10 @@ export default function Birth() {
         </View>
 
 
-        <View style={{alignItems:'center'}}>
-        <Text style={{ color: '#fff', fontWeight: '200', fontSize: 13 , top:25 }}>confirm your age for you</Text>
+        <View style={{ alignItems: 'center' }}>
+          <Text style={{ color: '#fff', fontWeight: '200', fontSize: 13, top: 25 }}>confirm your age for you</Text>
 
-     
+
 
         </View>
 
