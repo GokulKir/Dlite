@@ -59,7 +59,7 @@ export default function Login() {
 
 
 
-            <View style={{  width: responsiveWidth(90) , height: responsiveHeight(5), backgroundColor: '#2e3030', borderRadius: 5, borderRadius: 3, flexDirection: 'row', marginTop: responsiveHeight(9)}} >
+            <View style={{  width: responsiveWidth(90) , height: responsiveHeight(5), backgroundColor: '#282929', borderRadius: 5, borderRadius: 3, flexDirection: 'row', marginTop: responsiveHeight(9)}} >
 
               <TextInput style={{ width: "80%", height: '100%', paddingLeft: 12, color: "#989b9c" }} placeholder="Your email" placeholderTextColor={"#989b9c"} />
 
@@ -76,7 +76,7 @@ export default function Login() {
 
 
 
-            <View style={{  width: responsiveWidth(90) , height: responsiveHeight(5), backgroundColor: '#2e3030', borderRadius: 5, borderRadius: 3, flexDirection: 'row', marginTop: responsiveHeight(3) }} >
+            <View style={{  width: responsiveWidth(90) , height: responsiveHeight(5), backgroundColor: '#282929', borderRadius: 5, borderRadius: 3, flexDirection: 'row', marginTop: responsiveHeight(3) }} >
 
               <TextInput secureTextEntry={true} style={{ width: "80%", height: '100%', paddingLeft: 12, color: "#989b9c" }} placeholder="Your password" placeholderTextColor={"#989b9c"} />
 

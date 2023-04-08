@@ -97,7 +97,7 @@ export default function Mobile() {
 <View style={{alignItems:'center' ,  flexDirection:'row' , justifyContent:'space-between' , marginTop:hp('-4%') }}>
 
 
-<View style={{ width: wp('20%'), height: responsiveHeight(5) , backgroundColor: '#2e3030', marginTop: hp('12%'), borderRadius: 3, flexDirection: 'row'  ,left:wp('-2%') , justifyContent:'center' , }} >
+<View style={{ width: wp('20%'), height: responsiveHeight(5) , backgroundColor: '#282929', marginTop: hp('12%'), borderRadius: 3, flexDirection: 'row'  ,left:wp('-2%') , justifyContent:'center' , }} >
 
 
      
@@ -124,7 +124,7 @@ export default function Mobile() {
 
 
 
-<View style={{ width: responsiveWidth(70), height: responsiveHeight(5), backgroundColor: '#2e3030', borderRadius: 5, borderRadius: 3, flexDirection: 'row', marginTop: responsiveHeight(12) , left:responsiveWidth(1) }} >
+<View style={{ width: responsiveWidth(70), height: responsiveHeight(5), backgroundColor: '#282929', borderRadius: 5, borderRadius: 3, flexDirection: 'row', marginTop: responsiveHeight(12) , left:responsiveWidth(1) }} >
 
 <TextInput maxLength={10}  keyboardType = 'numeric' style={{ width: "80%", height: '100%', paddingLeft: 12, color: "#989b9c" }} placeholder="Your mobile" placeholderTextColor={"#989b9c"} onChangeText={setNumber} />
 

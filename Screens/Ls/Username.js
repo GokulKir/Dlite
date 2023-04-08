@@ -44,7 +44,7 @@ export default function Username() {
 
   <View style={{top:responsiveHeight(4)  , justifyContent:'space-between' , marginTop:responsiveHeight(6)}}>
 
-<View style={{width:responsiveWidth(90) , height:responsiveHeight(5) , backgroundColor:'#2e3030' , borderRadius:5 , borderRadius:3 , flexDirection:'row'}}>
+<View style={{width:responsiveWidth(90) , height:responsiveHeight(5) , backgroundColor:'#282929' , borderRadius:5 , borderRadius:3 , flexDirection:'row'}}>
 
 
 
@@ -62,7 +62,7 @@ export default function Username() {
 
 
 
-<View style={{width:responsiveWidth(90) , height:responsiveHeight(5) , backgroundColor:'#2e3030' , borderRadius:5 , borderRadius:3 , marginTop:responsiveHeight(3) , flexDirection:'row'}}>
+<View style={{width:responsiveWidth(90) , height:responsiveHeight(5) , backgroundColor:'#282929' , borderRadius:5 , borderRadius:3 , marginTop:responsiveHeight(3) , flexDirection:'row'}}>
 
 
 <TextInput style={{width:'80%' , height:'100%' , paddingLeft:12 ,}} placeholder="Surname" placeholderTextColor="#989b9c" color="#989b9c"/>
