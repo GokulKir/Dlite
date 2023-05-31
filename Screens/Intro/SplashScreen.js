@@ -16,25 +16,25 @@ export default function SplashScreen({ navigation }) {
   useEffect(() => {
     setTimeout(() => {
 
-      navigation.navigate('DL');
+      navigation.replace('DL')
 
     }, 2000);
   })
   return (
     <View style={styles.container}>
-      <View style={{ alignItems: 'center', marginTop: hp('24%') }}>
-        <Image style={{ width: wp('20%'), height: hp('36%') }} source={require('../../assets/D.png')} />
+      <View style={{ alignItems: 'center', marginTop: hp('29%') }}>
+        <Image style={{ width: wp('25%'), height: hp('21%') }} source={require('../../assets/Lt.png')} />
 
       </View>
-      <View style={{ alignItems: 'center', marginTop: hp('-11%') }}>
+      <View style={{ alignItems: 'center', marginTop: hp('-4%') }}>
         <DotIndicator size={8} color='white' />
 
       </View>
 
 
-       <View style={{alignItems:'center' , marginTop:responsiveHeight(30)}}>
+       <View style={{alignItems:'center' , marginTop:responsiveHeight(35)}}>
 
-        <Image style={{width:wp('40%') , height:hp('22%')}} source={require('../../assets/D1.png')}/>
+        <Image style={{width:wp('26%') , height:hp('7%') , borderRadius:10}} source={require('../../assets/DLi.png')}/>
 
        </View>
     </View>
@@ -44,6 +44,6 @@ export default function SplashScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000'
+    backgroundColor: '#080712'
   }
 })
