@@ -3,6 +3,7 @@ import React from 'react'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { TouchableHighlight, TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
+import { responsiveHeight, responsiveWidth } from 'react-native-responsive-dimensions';
 
 export default function Dl() {
 
@@ -13,20 +14,22 @@ export default function Dl() {
 
             <View style={{ alignItems: 'center' }}>
 
-                <ImageBackground style={{ width: wp('100%'), height: hp('32%') }} source={require('../../assets/enj.png')}>
+                {/* <Image style={{height:responsiveHeight(10) , width:responsiveWidth(20) , top:responsiveHeight(10)}} source={require('../../assets/Lt.png')}/> */}
 
-                </ImageBackground>
+                {/* <ImageBackground style={{ width: wp('100%'), height: hp('32%') }} source={require('../../assets/enj.png')}>
+
+                </ImageBackground> */}
 
             </View>
 
-            <View style={{ alignItems: 'center', marginBottom: hp('5%') }}>
+            <View style={{ alignItems: 'center', marginBottom: hp('5%') , marginTop:responsiveHeight(10) }}>
                 <Text style={{ color: '#fff', fontSize: wp('6.8%'), fontWeight: '200' }}>What happened, guys? </Text>
                 <Text style={{ color: '#fff', fontSize: wp('6.8%'), left: wp('-13%'), fontWeight: '100' }}> Let's start now.</Text>
             </View>
 
-            <View style={{ alignItems: 'center', top: hp('12%') }}>
+            <View style={{ alignItems: 'center', top: hp('12%') , marginTop:responsiveHeight(15) }}>
 
-                <TouchableOpacity style={{ width: wp('80%'), height: hp('5%'), backgroundColor: '#fff', borderRadius: 20, alignItems: 'center', justifyContent: "center" }}>
+                <TouchableOpacity onPress={()=> navigation.navigate('MyTabs')} style={{ width: wp('80%'), height: hp('5%'), backgroundColor: '#fff', borderRadius: 20, alignItems: 'center', justifyContent: "center" }}>
 
                     <View style={{ alignItems: 'center', justifyContent: 'center', flexDirection: 'row', left: wp('-2%') }}>
 
@@ -40,7 +43,7 @@ export default function Dl() {
                 </TouchableOpacity>
 
 
-                <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', top: hp('1.5%'), alignSelf: 'center' }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', top: hp('2.5%'), alignSelf: 'center' }}>
 
                     <View style={{ width: wp('30%'), height: hp('0.1%'), backgroundColor: '#DDD', left: wp('-2%') }}>
 
@@ -54,7 +57,7 @@ export default function Dl() {
 
                 </View>
 
-                <TouchableOpacity onPress={() => navigation.navigate('Username')} style={{ width: wp('80%'), height: hp('5%'), backgroundColor: '#67f5d4', borderRadius: 20, top: hp('3%'), justifyContent: 'center' }}>
+                <TouchableOpacity onPress={() => navigation.navigate('Username')} style={{ width: wp('80%'), height: hp('5%'), backgroundColor: '#67f5d4', borderRadius: 20, top: hp('5%'), justifyContent: 'center' ,  }}>
 
                     <View style={{ alignItems: 'center', justifyContent: 'center' }}>
 
@@ -72,7 +75,7 @@ export default function Dl() {
             </View>
 
 
-            <View style={{ top: hp('22%'), alignItems: 'center' }} >
+            <View style={{ top: hp('32%'), alignItems: 'center' , }} >
 
                 <View style={{ flexDirection: 'row', justifyContent: 'flex-start', right: wp('2%') }}>
                     <Text style={{ color: '#fff' }}>Have an account already?</Text>
@@ -107,6 +110,6 @@ export default function Dl() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#000'
+        backgroundColor: '#080712'
     }
 })

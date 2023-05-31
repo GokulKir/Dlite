@@ -15,7 +15,7 @@ export default function Username() {
     <View style={styles.container}>
 
 
-<View style={{ width: wp('100%'), height: hp('7%'), backgroundColor: '#000', justifyContent: "space-between", left: wp('4%'), top: hp('2%') }}>
+<View style={{ width: wp('100%'), height: hp('7%'), backgroundColor: '#080712', justifyContent: "space-between", left: wp('4%'), top: hp('2%') }}>
 
 <TouchableOpacity onPress={() => navigation.goBack()}>
 
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
 
   container : {
     flex : 1 ,
-    backgroundColor:'#000'
+    backgroundColor:'#080712'
   }
 
 })

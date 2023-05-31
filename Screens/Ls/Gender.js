@@ -126,7 +126,7 @@ export default function Gender(props) {
         <View style={{ alignItems: 'center', marginTop: hp('5%') }}>
 
 
-          <TouchableOpacity onPress={() => console.log(isSelected)} style={{ width: wp('90%'), height: hp('4.8%'), backgroundColor: '#67f5d4', borderRadius: 4, alignItems: 'center', justifyContent: 'center' }}>
+          <TouchableOpacity onPress={() => navigation.navigate('Finish')} style={{ width: wp('90%'), height: hp('4.8%'), backgroundColor: '#67f5d4', borderRadius: 4, alignItems: 'center', justifyContent: 'center' }}>
 
             <Text style={{ fontSize: 17, fontWeight: 'bold', color: '#000' }}>Next</Text>
 
@@ -174,6 +174,6 @@ export default function Gender(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000'
+    backgroundColor: '#080712'
   }
 })
